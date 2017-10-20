@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    
-
     $('#submit').on('click', function(event) {
 
         event.preventDefault();
@@ -11,7 +9,7 @@ $(document).ready(function() {
         'slow');
 
         var bandSearch = $('#bandName').val().trim();
-        var bandQueryURL = "https:itunes.apple.com/search?term=" + bandSearch + "&limit=100";
+        var bandQueryURL = "https://itunes.apple.com/search?term=" + bandSearch + "&limit=100";
         var json;
 
         $.ajax({
@@ -38,7 +36,7 @@ $(document).ready(function() {
 
             var weatherSearch = $('#location').val().trim();
 
-            var weatherQueryURL = 'http://api.openweathermap.org/data/2.5/weather?q=' + weatherSearch + '&units=imperial&mode=json&APPID=7c13bf011272646fc4a945352ad1a721';
+            var weatherQueryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + weatherSearch + '&units=imperial&mode=json&APPID=7c13bf011272646fc4a945352ad1a721';
 
             $.ajax({
                 url: weatherQueryURL,
